@@ -1,0 +1,1 @@
+This is the repository for the projects that I create while learning JavaScript via codecademy's Intro to JS course
