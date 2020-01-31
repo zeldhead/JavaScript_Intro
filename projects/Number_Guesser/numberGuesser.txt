@@ -1,0 +1,33 @@
+let humanScore = 0;
+let computerScore = 0;
+let currentRoundNumber = 1;
+
+
+//create function to generate the computer's number
+const generateTarget = () => {
+  return Math.floor(Math.random() * 10);
+}
+
+//write a function to compare the computer's and human's guesses and determine winner. human wins on tie
+const compareGuesses = (humanGuess, computerGuess, targetGuess) => {
+  const humanDifference = Math.abs(targetGuess - humanGuess);
+  const computerDifference = Math.abs(targetGuess - computerGuess);
+  if (humanDifference <= computerDifference) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//write a function to track score 
+const updateScore = winner => {
+  if (winner === 'human') {
+    humanScore++;
+  } else if (winner === 'computer') {
+    computerScore++;
+  }
+}
+
+//write function to increase round counter
+const advanceRound = () => currentRoundNumber++;
+
